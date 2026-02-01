@@ -6,13 +6,13 @@
 /*   By: gegrigor <gegrigor@student.42yerevan.am>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 22:31:42 by gegrigor          #+#    #+#             */
-/*   Updated: 2026/01/28 23:47:35 by gegrigor         ###   ########.fr       */
+/*   Updated: 2026/01/31 22:04:55 by gegrigor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_numlen(int n)
+static size_t	ft_numlen(int n)
 {
 	size_t	i;
 

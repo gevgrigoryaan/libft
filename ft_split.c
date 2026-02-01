@@ -11,8 +11,16 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+/*
+void	ft_freeprev(char **arr, size_t i)
+{
+	while (i > 0)
+		free(arr[--i]);
+	free(arr);
+}
+*/
 
-size_t	count_words(char const *s, char c)
+static size_t	count_words(char const *s, char c)
 {
 	size_t	i;
 	size_t	count;
@@ -33,7 +41,7 @@ size_t	count_words(char const *s, char c)
 	return (count);
 }
 
-char	*fill_word(char const *s, size_t start, size_t end)
+static char	*fill_word(char const *s, size_t start, size_t end)
 {
 	char		*word;
 	size_t		j;
@@ -75,3 +83,6 @@ char	**ft_split(char const *s, char c)
 	p[j] = NULL;
 	return (p);
 }
+	//		if(!p[j])
+	//			return (free_split(p, j), NULL);
+	//		j++;
