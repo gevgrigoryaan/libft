@@ -11,13 +11,14 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/*
 void	ft_freeprev(char **arr, size_t i)
 {
 	while (i > 0)
 		free(arr[--i]);
 	free(arr);
 }
+*/
 
 static size_t	count_words(char const *s, char c)
 {
@@ -43,24 +44,30 @@ static size_t	count_words(char const *s, char c)
 static char	*fill_word(char const *s, size_t start, size_t end)
 {
 	char		*word;
-	size_t		k;
+	size_t		j;
 
-	k = 0;
+	j = 0;
 	word = (char *)malloc(end - start + 1);
 	if (!word)
 		return (NULL);
 	while (start < end)
-		word[k++] = s[start++];
-	word[k] = '\0';
+		word[j++] = s[start++];
+	word[j] = '\0';
 	return (word);
 }
 
-static int	get_word(char const *s, int c, char **p)
+char	**ft_split(char const *s, char c)
 {
-	size_t		i;
-	size_t		j;
-	size_t		start;
+	size_t	i;
+	size_t	j;
+	size_t	start;
+	char	**p;
 
+	if (!s)
+		return (NULL);
+	p = (char **)malloc((count_words(s, c) + 1) * sizeof(char *));
+	if (!p)
+		return (NULL);
 	i = 0;
 	j = 0;
 	while (s[i])
@@ -71,27 +78,11 @@ static int	get_word(char const *s, int c, char **p)
 		while (s[i] && s[i] != c)
 			i++;
 		if (i > start)
-		{
-			p[j] = fill_word(s, start, i);
-			if (!p[j])
-				return (ft_freeprev(p, j), 0);
-			j++;
-		}
+			p[j++] = fill_word(s, start, i);
 	}
 	p[j] = NULL;
-	return (1);
-}
-
-char	**ft_split(char const *s, char c)
-{
-	char	**p;
-
-	if (!s)
-		return (NULL);
-	p = (char **)malloc((count_words(s, c) + 1) * sizeof(char *));
-	if (!p)
-		return (NULL);
-	if (!get_word(s, c, p))
-		return (NULL);
 	return (p);
 }
+	//		if(!p[j])
+	//			return (free_split(p, j), NULL);
+	//		j++;
