@@ -6,7 +6,7 @@
 /*   By: gegrigor <gegrigor@student.42yerevan.am>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 16:32:27 by gegrigor          #+#    #+#             */
-/*   Updated: 2026/01/31 22:04:05 by gegrigor         ###   ########.fr       */
+/*   Updated: 2026/02/05 22:32:11 by gegrigor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,3 +61,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 		j--;
 	return (new_str(s1, i, j - i));
 }
+/*
+#include <stdio.h>
+int main()
+{
+	printf("%s", ft_strtrim("xxxxasasasxxx", "xx"));
+	return 0;
+}
+*/

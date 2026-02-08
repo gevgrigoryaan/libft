@@ -6,7 +6,7 @@
 /*   By: gegrigor <gegrigor@student.42yerevan.am>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 13:44:21 by gegrigor          #+#    #+#             */
-/*   Updated: 2026/01/29 15:03:24 by gegrigor         ###   ########.fr       */
+/*   Updated: 2026/02/05 16:34:50 by gegrigor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,3 +26,12 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (i);
 }
+/*
+#include <stdio.h>
+int	main()
+{
+	int i = ft_lstsize(NULL);
+	printf("%d", i);
+	return 0;
+}
+*/

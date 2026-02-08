@@ -6,7 +6,7 @@
 /*   By: gegrigor <gegrigor@student.42yerevan.am>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 16:34:06 by gegrigor          #+#    #+#             */
-/*   Updated: 2026/01/28 23:45:19 by gegrigor         ###   ########.fr       */
+/*   Updated: 2026/02/05 17:31:29 by gegrigor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,11 @@ char	*ft_strdup(const char *s1)
 	s[i] = '\0';
 	return (s);
 }
+/*
+#include <string.h>
+int main()
+{
+	char *p= ft_strdup("");
+	return 0;
+}
+*/

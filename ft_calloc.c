@@ -6,7 +6,7 @@
 /*   By: gegrigor <gegrigor@student.42yerevan.am>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 16:33:49 by gegrigor          #+#    #+#             */
-/*   Updated: 2026/01/28 23:45:02 by gegrigor         ###   ########.fr       */
+/*   Updated: 2026/02/05 22:17:29 by gegrigor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,22 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	unsigned char	*p;
 
+	if (count && size > SIZE_MAX / count)
+		return (NULL);
 	p = (unsigned char *)malloc(count * size);
 	if (!p)
 		return (NULL);
 	ft_bzero(p, count * size);
 	return (p);
 }
+/*
+#include <limits.h>
+#include <stdio.h>
+int main()
+{
+	void *p = ft_calloc(INT_MIN, INT_MIN);
+	printf("%p", p);
+	free(p);
+	return 0;
+}
+*/

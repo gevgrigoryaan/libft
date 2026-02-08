@@ -44,10 +44,7 @@ SOURCES = \
 	ft_lstiter.c \
 	ft_lstmap.c
 
-B_SRC= \
-	ft_putchar_bonus.c
 OBJECTS = $(SOURCES:.c=.o)
-B_OBJ = $(B_SRC:.c=.o)
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
@@ -58,14 +55,11 @@ all: $(NAME)
 $(NAME): $(OBJECTS)
 	$(AR) $@ $(OBJECTS)
 
-bonus: $(OBJECTS) $(B_OBJ)
-	$(AR) $(NAME) $(B_OBJ)
-
 %.o: %.c
 	$(CC) -c $(CFLAGS) $< -o $@
 
 clean:
-	rm -f $(OBJECTS) $(B_OBJ)
+	rm -f $(OBJECTS)
 
 fclean: clean
 	rm -f $(NAME)

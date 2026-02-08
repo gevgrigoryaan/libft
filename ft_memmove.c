@@ -6,7 +6,7 @@
 /*   By: gegrigor <gegrigor@student.42yerevan.am>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 21:52:30 by gegrigor          #+#    #+#             */
-/*   Updated: 2026/01/30 18:23:11 by gegrigor         ###   ########.fr       */
+/*   Updated: 2026/02/05 22:28:34 by gegrigor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,3 +38,12 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (d);
 }
+/*
+#include <string.h>
+int	main()
+{
+//	void *p = ft_memmove("sdds", NULL, 10);
+	void *s = memmove("sdfds", NULL, 10);
+	return 0;
+}
+*/
