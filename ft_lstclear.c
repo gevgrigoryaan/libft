@@ -6,7 +6,7 @@
 /*   By: gegrigor <gegrigor@student.42yerevan.am>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 13:58:32 by gegrigor          #+#    #+#             */
-/*   Updated: 2026/01/29 14:38:38 by gegrigor         ###   ########.fr       */
+/*   Updated: 2026/02/08 15:58:48 by gegrigor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*tmp;
 
-	if (!lst)
+	if (!lst || !del)
 		return ;
 	while (*lst)
 	{
